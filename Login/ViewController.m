@@ -82,9 +82,11 @@
                     token = [result valueForKey:@"token"];
                     NSLog(@"Output after storing token %@", token);
                     NSLog(@"Login SUCCESS");
+                    StudentViewController *detailViewController = [[StudentViewController alloc] initWithNibName:@"StudentViewController" bundle:nil];
+                    [self.navigationController pushViewController:detailViewController animated:YES];
                     //[self alertStatus:@"Logged in Successfully." :@"Login Success!"];
-                    StudentViewController *studentViewController = [[StudentViewController alloc] initWithNibName:@"StudentViewController" bundle:nil];
-                    [self presentViewController:studentViewController animated:YES completion:nil];
+                  //  StudentViewController *studentViewController = [[StudentViewController alloc] initWithNibName:@"StudentViewController" bundle:nil];
+                   // [self presentViewController:studentViewController animated:YES completion:nil];
                 } else {
                     
                    // NSString *error_msg = (NSString *) [jsonData objectForKey:@"error_message"];

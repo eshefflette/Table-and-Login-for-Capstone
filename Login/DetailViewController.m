@@ -77,7 +77,7 @@
     
     //detailViewController.course.text = [[students objectAtIndex:indexPath.row] objectForKey:@"lastname"];
     detailViewController.assignments = [stud objectAtIndex:indexPath.row];
-    [self presentViewController:detailViewController animated:YES completion:nil];
+    [self.navigationController pushViewController:detailViewController animated:YES];
     
 }
 

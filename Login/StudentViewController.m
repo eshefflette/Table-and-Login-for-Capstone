@@ -171,7 +171,7 @@ NSString *kCellID = @"cellID";
     
     NSLog(@"Prepare for segue %@", [[[object objectAtIndex:0] objectAtIndex:1] valueForKey:@"coursename"]);
     detailViewController.stud = object;
-    [self presentViewController:detailViewController animated:YES completion:nil];
+    [self.navigationController pushViewController:detailViewController animated:YES];
     
 }
 
