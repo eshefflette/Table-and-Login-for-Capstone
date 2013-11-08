@@ -30,7 +30,7 @@
   //  @try {
         
         if([[usernameText text] isEqualToString:@""] || [[passwordText text] isEqualToString:@""] ) {
-            [self alertStatus:@"Please enter both Username and Password" :@"Login Failed!"];
+            [self alertStatus:@"Please enter a Username & Password" :@"Login Failed"];
         }
         else {
             username = [usernameText text];
@@ -88,12 +88,12 @@
                 } else {
                     
                    // NSString *error_msg = (NSString *) [jsonData objectForKey:@"error_message"];
-                    [self alertStatus:@"Login Failed!" :@"Login FAILED"];
+                    [self alertStatus:@"Invalid Username & Passowrd combination" :@"Login Failed"];
                 }
                 
             } else {
                 if (error) NSLog(@"Error: %@", error);
-                [self alertStatus:@"Connection Failed" :@"Login Failed!"];
+                [self alertStatus:@"Connection to the server failed" :@"Login Failed"];
             }
         }
    // }
