@@ -7,6 +7,7 @@
 //
 
 #import "AssignmentViewController.h"
+#import "SingleAssignmentViewController.h"
 
 @interface AssignmentViewController ()
 
@@ -57,10 +58,17 @@
     //{
     //   cell.textLabel.text = [[students objectAtIndex:indexPath.row] objectForKey:@"itemname"];
  //   NSLog(@"Detail view name %@", [[[stud objectAtIndex:indexPath.row] objectAtIndex:0] objectForKey:@"coursename"]);
-    cell.detailTextLabel.text = [[assignments objectAtIndex:indexPath.row]  objectForKey:@"grademax"];
-    cell.textLabel.text = [[assignments objectAtIndex:indexPath.row] objectForKey:@"finalgrade"];
+    cell.detailTextLabel.text = [[assignments objectAtIndex:indexPath.row]  objectForKey:@"finalgrade"];
+    NSLog(@"Assignment name %@", [[assignments objectAtIndex:indexPath.row] objectForKey:@"assignmentname"]);
+    if ((NSNull *)[[assignments objectAtIndex:indexPath.row] valueForKey:@"assignmentname"] == [NSNull null])    {
+        cell.textLabel.text = @"Blank";
+    }else
+    {
+    cell.textLabel.text = [[assignments objectAtIndex:indexPath.row] objectForKey:@"assignmentname"];
+    }
     // }
     return cell;
+    
 }
 
 -(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -68,5 +76,17 @@
     
     return [assignments count];
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SingleAssignmentViewController *detailViewController = [SingleAssignmentViewController alloc];
+    detailViewController.passedAssignment = [assignments objectAtIndex:indexPath.row];
+    detailViewController.courseNameLabel.text = [[assignments objectAtIndex:indexPath.row] valueForKey:@"coursename"];
+    detailViewController.assignmentNameLabel = [[assignments objectAtIndex:indexPath.row] valueForKey:@"assignmentname"];
+    detailViewController.finalGradeLabel = [[assignments objectAtIndex:indexPath.row] valueForKey:@"finalegrade"];
+    detailViewController.gradeMaxLabel = [[assignments objectAtIndex:indexPath.row] valueForKey:@"grademax"];
+    [self.navigationController pushViewController:detailViewController animated:YES];
+}
+
 
 @end

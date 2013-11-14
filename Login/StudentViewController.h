@@ -19,7 +19,8 @@
     NSMutableArray *students2;
     NSMutableArray *classes;
     NSMutableArray *cohort;
-    
+    double finalGradeHold;
+    double finalGradeHoldTwo;
 }
 
 @property (nonatomic, retain) NSArray *students;
@@ -27,5 +28,7 @@
 @property (nonatomic, retain) NSMutableArray *students2;
 @property (nonatomic, retain) NSMutableArray *classes;
 @property (nonatomic, retain) NSMutableArray *cohort;
+@property (nonatomic) double finalGradeHold;
+@property (nonatomic) double finalGradeHoldTwo;
 
 @end

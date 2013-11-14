@@ -14,9 +14,11 @@
     IBOutlet UITableView *mainTableView;
     
     NSMutableArray *stud;
-    
+    double finalGradeHold;
+    double finalGradeHoldTwo;
 }
 
 @property (nonatomic, retain) NSMutableArray *stud;
-
+@property (nonatomic) double finalGradeHold;
+@property (nonatomic) double finalGradeHoldTwo;
 @end
