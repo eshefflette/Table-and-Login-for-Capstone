@@ -31,6 +31,8 @@
 		07BBA97B17DD908B00591DF0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BBA97A17DD908B00591DF0 /* ViewController.m */; };
 		07BBA97E17DD908B00591DF0 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07BBA97C17DD908B00591DF0 /* ViewController_iPhone.xib */; };
 		07BBA98117DD908B00591DF0 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07BBA97F17DD908B00591DF0 /* ViewController_iPad.xib */; };
+		07F5AC5E1839C167004810EA /* StudentCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F5AC5C1839C167004810EA /* StudentCollectionViewController.m */; };
+		07F5AC5F1839C167004810EA /* StudentCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F5AC5D1839C167004810EA /* StudentCollectionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,9 @@
 		07BBA97A17DD908B00591DF0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		07BBA97D17DD908B00591DF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		07BBA98017DD908B00591DF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		07F5AC5B1839C167004810EA /* StudentCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentCollectionViewController.h; sourceTree = "<group>"; };
+		07F5AC5C1839C167004810EA /* StudentCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentCollectionViewController.m; sourceTree = "<group>"; };
+		07F5AC5D1839C167004810EA /* StudentCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentCollectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +129,9 @@
 				07346739182E1E0A00D8395D /* SingleAssignmentViewController.xib */,
 				07126D26182AFF4F00180A25 /* AssignmentViewController.xib */,
 				07126D1F182AFF4800180A25 /* DetailViewController.h */,
+				07F5AC5B1839C167004810EA /* StudentCollectionViewController.h */,
+				07F5AC5C1839C167004810EA /* StudentCollectionViewController.m */,
+				07F5AC5D1839C167004810EA /* StudentCollectionViewController.xib */,
 				07126D20182AFF4800180A25 /* DetailViewController.m */,
 				07126D21182AFF4800180A25 /* DetailViewController.xib */,
 				07BBA97017DD908B00591DF0 /* AppDelegate.h */,
@@ -212,6 +220,7 @@
 				072F6DB81835713900729BB1 /* red.png in Resources */,
 				07126D28182AFF4F00180A25 /* AssignmentViewController.xib in Resources */,
 				07BBA97617DD908B00591DF0 /* Default@2x.png in Resources */,
+				07F5AC5F1839C167004810EA /* StudentCollectionViewController.xib in Resources */,
 				07126D2E182AFF6A00180A25 /* StudentViewController_iPad.xib in Resources */,
 				07126D23182AFF4800180A25 /* DetailViewController.xib in Resources */,
 				07BBA97817DD908B00591DF0 /* Default-568h@2x.png in Resources */,
@@ -231,6 +240,7 @@
 			files = (
 				07126D2B182AFF6300180A25 /* StudentViewController.m in Sources */,
 				07126D22182AFF4800180A25 /* DetailViewController.m in Sources */,
+				07F5AC5E1839C167004810EA /* StudentCollectionViewController.m in Sources */,
 				07BBA96E17DD908B00591DF0 /* main.m in Sources */,
 				07126D27182AFF4F00180A25 /* AssignmentViewController.m in Sources */,
 				07BBA97217DD908B00591DF0 /* AppDelegate.m in Sources */,
