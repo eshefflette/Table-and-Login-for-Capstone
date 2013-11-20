@@ -8,6 +8,7 @@
 
 #import "AssignmentViewController.h"
 #import "SingleAssignmentViewController.h"
+#import "StudentCollectionViewController.h"
 
 @interface AssignmentViewController ()
 
@@ -76,7 +77,7 @@
     
     return [assignments count];
 }
-
+/*
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SingleAssignmentViewController *detailViewController = [SingleAssignmentViewController alloc];
@@ -86,7 +87,16 @@
     detailViewController.finalGradeLabel = [[assignments objectAtIndex:indexPath.row] valueForKey:@"finalegrade"];
     detailViewController.gradeMaxLabel = [[assignments objectAtIndex:indexPath.row] valueForKey:@"grademax"];
     [self.navigationController pushViewController:detailViewController animated:YES];
+}*/
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    StudentCollectionViewController *detailViewController = [StudentCollectionViewController alloc];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
+
+
 
 
 @end
