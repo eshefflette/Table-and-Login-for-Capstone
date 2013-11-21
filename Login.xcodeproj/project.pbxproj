@@ -31,6 +31,9 @@
 		07BBA97B17DD908B00591DF0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BBA97A17DD908B00591DF0 /* ViewController.m */; };
 		07BBA97E17DD908B00591DF0 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07BBA97C17DD908B00591DF0 /* ViewController_iPhone.xib */; };
 		07BBA98117DD908B00591DF0 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07BBA97F17DD908B00591DF0 /* ViewController_iPad.xib */; };
+		07DFC859183DB46700F98FAD /* holiday.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DFC858183DB46700F98FAD /* holiday.png */; };
+		07DFC85B183DB46E00F98FAD /* otter.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DFC85A183DB46E00F98FAD /* otter.png */; };
+		07DFC85D183DB47300F98FAD /* seal.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DFC85C183DB47300F98FAD /* seal.png */; };
 		07F5AC68183B5EA5004810EA /* StudentCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F5AC66183B5EA5004810EA /* StudentCollectionViewController.m */; };
 		07F5AC69183B5EA5004810EA /* StudentCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F5AC67183B5EA5004810EA /* StudentCollectionViewController.xib */; };
 		07F5AC71183C3F66004810EA /* NibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F5AC70183C3F66004810EA /* NibCell.xib */; };
@@ -70,6 +73,9 @@
 		07BBA97A17DD908B00591DF0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		07BBA97D17DD908B00591DF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		07BBA98017DD908B00591DF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		07DFC858183DB46700F98FAD /* holiday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holiday.png; sourceTree = "<group>"; };
+		07DFC85A183DB46E00F98FAD /* otter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = otter.png; sourceTree = "<group>"; };
+		07DFC85C183DB47300F98FAD /* seal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seal.png; sourceTree = "<group>"; };
 		07F5AC65183B5EA5004810EA /* StudentCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentCollectionViewController.h; path = ../StudentCollectionViewController.h; sourceTree = "<group>"; };
 		07F5AC66183B5EA5004810EA /* StudentCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentCollectionViewController.m; path = ../StudentCollectionViewController.m; sourceTree = "<group>"; };
 		07F5AC67183B5EA5004810EA /* StudentCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StudentCollectionViewController.xib; path = ../StudentCollectionViewController.xib; sourceTree = "<group>"; };
@@ -153,6 +159,9 @@
 			children = (
 				072F6DB41835713900729BB1 /* green.png */,
 				072F6DB51835713900729BB1 /* red.png */,
+				07DFC85A183DB46E00F98FAD /* otter.png */,
+				07DFC858183DB46700F98FAD /* holiday.png */,
+				07DFC85C183DB47300F98FAD /* seal.png */,
 				072F6DB61835713900729BB1 /* yellow.png */,
 				07BBA96917DD908B00591DF0 /* Login-Info.plist */,
 				07BBA96A17DD908B00591DF0 /* InfoPlist.strings */,
@@ -231,6 +240,9 @@
 				072F6DB71835713900729BB1 /* green.png in Resources */,
 				07BBA97E17DD908B00591DF0 /* ViewController_iPhone.xib in Resources */,
 				07BBA98117DD908B00591DF0 /* ViewController_iPad.xib in Resources */,
+				07DFC859183DB46700F98FAD /* holiday.png in Resources */,
+				07DFC85D183DB47300F98FAD /* seal.png in Resources */,
+				07DFC85B183DB46E00F98FAD /* otter.png in Resources */,
 				072F6DB91835713900729BB1 /* yellow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

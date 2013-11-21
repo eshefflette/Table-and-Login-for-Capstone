@@ -14,14 +14,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="image" translatesAutoresizingMaskIntoConstraints="NO" id="9e6-N8-5ri">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="colorImage" translatesAutoresizingMaskIntoConstraints="NO" id="9e6-N8-5ri">
                         <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <size key="customSize" width="35" height="35"/>
         </collectionViewCell>
     </objects>
