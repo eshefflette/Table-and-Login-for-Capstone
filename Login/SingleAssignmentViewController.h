@@ -16,6 +16,7 @@
     IBOutlet UILabel *courseNameLabel;
     IBOutlet UITextView *commentView;
     NSArray *passedAssignment;
+    
 }
 
 @property (nonatomic, retain) UILabel *assignmentNameLabel;

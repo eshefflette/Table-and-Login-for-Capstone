@@ -8,6 +8,7 @@
 
 #import "StudentViewController.h"
 #import "DetailViewController.h"
+#import "StudentCollectionViewController.h"
 
 NSString *kDetailedViewControllerID = @"DetailView";    // view controller storyboard id
 NSString *kCellID = @"cellID";
@@ -33,6 +34,10 @@ NSString *kCellID = @"cellID";
 {
     [super viewDidLoad];
     self.title = @"Students";
+    UIBarButtonItem* viewButton = [[UIBarButtonItem alloc] initWithTitle:@"View Type" style:UIBarButtonItemStyleBordered target:self action:@selector(viewClick:)];
+    //  [self setToolbarItems:[NSArray arrayWithObject:editButton]];
+    [[self navigationItem] setRightBarButtonItem:viewButton];
+
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     NSURL *url = [NSURL URLWithString:@"http://shefflettetech.com/testmoodle/webservice/rest/server.php?wstoken=5bf740e75ee58d5222263e4ccac9173d&wsfunction=local_test_get_grades_for_cohort_members&moodlewsrestformat=json&cohortids=1"];
@@ -294,6 +299,14 @@ NSString *kCellID = @"cellID";
     detailViewController.stud = object;
     [self.navigationController pushViewController:detailViewController animated:YES];
     
+}
+
+- (IBAction)viewClick:(id)sender
+{
+
+    NSLog(@"TEST BUTTON CLICK");
+    StudentCollectionViewController *studentCollectionViewController = [[StudentCollectionViewController alloc] initWithNibName:@"StudentCollectionViewController" bundle:nil];
+    [self.navigationController pushViewController:studentCollectionViewController animated:YES];
 }
 
 @end

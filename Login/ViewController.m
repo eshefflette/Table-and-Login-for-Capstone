@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "StudentViewController.h"
+#import "StudentCollectionViewController.h"
 @interface ViewController ()
 
 @end
@@ -82,7 +83,7 @@
                     token = [result valueForKey:@"token"];
                     NSLog(@"Output after storing token %@", token);
                     NSLog(@"Login SUCCESS");
-                    StudentViewController *detailViewController = [[StudentViewController alloc] initWithNibName:@"StudentViewController" bundle:nil];
+                    StudentCollectionViewController *detailViewController = [[StudentCollectionViewController alloc] initWithNibName:@"StudentCollectionViewController" bundle:nil];
                     [self.navigationController pushViewController:detailViewController animated:YES];
                     //[self alertStatus:@"Logged in Successfully." :@"Login Success!"];
                   //  StudentViewController *studentViewController = [[StudentViewController alloc] initWithNibName:@"StudentViewController" bundle:nil];

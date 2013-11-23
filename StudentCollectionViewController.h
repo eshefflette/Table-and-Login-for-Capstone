@@ -20,7 +20,7 @@
     double finalGradeHold;
     double finalGradeHoldTwo;
 }
-
+- (IBAction)viewClick:(id)sender;
 @property (nonatomic, retain) NSArray *students;
 @property (nonatomic, retain) NSMutableArray *assignments;
 @property (nonatomic, retain) NSMutableArray *students2;

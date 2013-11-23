@@ -34,6 +34,7 @@
 		07DFC859183DB46700F98FAD /* holiday.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DFC858183DB46700F98FAD /* holiday.png */; };
 		07DFC85B183DB46E00F98FAD /* otter.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DFC85A183DB46E00F98FAD /* otter.png */; };
 		07DFC85D183DB47300F98FAD /* seal.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DFC85C183DB47300F98FAD /* seal.png */; };
+		07EFDE34183EAF8700F377A7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EFDE33183EAF8700F377A7 /* MessageUI.framework */; };
 		07F5AC68183B5EA5004810EA /* StudentCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F5AC66183B5EA5004810EA /* StudentCollectionViewController.m */; };
 		07F5AC69183B5EA5004810EA /* StudentCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F5AC67183B5EA5004810EA /* StudentCollectionViewController.xib */; };
 		07F5AC71183C3F66004810EA /* NibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F5AC70183C3F66004810EA /* NibCell.xib */; };
@@ -76,6 +77,7 @@
 		07DFC858183DB46700F98FAD /* holiday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holiday.png; sourceTree = "<group>"; };
 		07DFC85A183DB46E00F98FAD /* otter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = otter.png; sourceTree = "<group>"; };
 		07DFC85C183DB47300F98FAD /* seal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seal.png; sourceTree = "<group>"; };
+		07EFDE33183EAF8700F377A7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		07F5AC65183B5EA5004810EA /* StudentCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentCollectionViewController.h; path = ../StudentCollectionViewController.h; sourceTree = "<group>"; };
 		07F5AC66183B5EA5004810EA /* StudentCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentCollectionViewController.m; path = ../StudentCollectionViewController.m; sourceTree = "<group>"; };
 		07F5AC67183B5EA5004810EA /* StudentCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StudentCollectionViewController.xib; path = ../StudentCollectionViewController.xib; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07EFDE34183EAF8700F377A7 /* MessageUI.framework in Frameworks */,
 				07BBA96217DD908B00591DF0 /* UIKit.framework in Frameworks */,
 				07BBA96417DD908B00591DF0 /* Foundation.framework in Frameworks */,
 				07BBA96617DD908B00591DF0 /* CoreGraphics.framework in Frameworks */,
@@ -116,6 +119,7 @@
 		07BBA96017DD908B00591DF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07EFDE33183EAF8700F377A7 /* MessageUI.framework */,
 				07BBA96117DD908B00591DF0 /* UIKit.framework */,
 				07BBA96317DD908B00591DF0 /* Foundation.framework */,
 				07BBA96517DD908B00591DF0 /* CoreGraphics.framework */,

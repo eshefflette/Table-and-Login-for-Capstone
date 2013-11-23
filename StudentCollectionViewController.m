@@ -8,6 +8,7 @@
 
 #import "StudentCollectionViewController.h"
 #import "DetailViewController.h"
+#import "StudentViewController.h"
 
 @interface StudentCollectionViewController ()
 
@@ -30,6 +31,9 @@
 {
    
     [super viewDidLoad];
+    UIBarButtonItem* viewButton = [[UIBarButtonItem alloc] initWithTitle:@"View Type" style:UIBarButtonItemStyleBordered target:self action:@selector(viewClick:)];
+  //  [self setToolbarItems:[NSArray arrayWithObject:editButton]];
+    [[self navigationItem] setRightBarButtonItem:viewButton];
     
     UINib *cellNib = [UINib nibWithNibName:@"NibCell" bundle:nil];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:@"cvCell"];
@@ -165,22 +169,27 @@
     if(finalGradeHold > 80)
     {
         NSLog(@"above 80");
-        cell.backgroundColor = [UIColor greenColor];
-        colorImage.image = [UIImage imageNamed:@"green.png"];
+       // cell.backgroundColor = [UIColor greenColor];
+        cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"green.png"]];
+
+        //colorImage.image = [UIImage imageNamed:@"green.png"];
     }
     else if(finalGradeHold >= 70) //&& hold <= 80)
     {
         NSLog(@"above 70");
-        cell.backgroundColor = [UIColor yellowColor];
+       // cell.backgroundColor = [UIColor yellowColor];
+        cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"yellow.png"]];
+
         //cell.
-      //  cell.image = [UIImage imageNamed:@"yellow.png"];
-       // colorImage.image = [UIImage imageNamed:@"yellow.png"];
+      //  cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"yellow"]];
+      //  colorImage.image = [UIImage imageNamed:@"yellow.png"];
     }
     else
     {
         NSLog(@"below 70");
-        //cell.backgroundColor = [UIColor redColor];
-        colorImage.image = [UIImage imageNamed:@"red.png"];
+        cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"red.png"]];
+       // cell.backgroundColor = [UIColor redColor];
+        //colorImage.image = [UIImage imageNamed:@"red.png"];
     }
     // hold = 0;
     return cell;
@@ -328,4 +337,11 @@
     return UIEdgeInsetsMake(10, 10, 10, 10);
 }
 
+- (IBAction)viewClick:(id)sender
+{
+    NSLog(@"TEST BUTTON CLICK");
+    StudentViewController *studentViewController = [[StudentViewController alloc] initWithNibName:@"StudentViewController" bundle:nil];
+    [self.navigationController pushViewController:studentViewController animated:YES];
+
+}
 @end
