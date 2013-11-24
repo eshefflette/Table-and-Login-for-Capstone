@@ -19,7 +19,7 @@ NSString *kCellID = @"cellID";
 
 @implementation StudentViewController
 
-@synthesize students, assignments, students2, classes, cohort, finalGradeHold, finalGradeHoldTwo;
+@synthesize students, assignments, students2, classes, cohort, finalGradeHold, finalGradeHoldTwo, userName, token;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,13 +40,33 @@ NSString *kCellID = @"cellID";
 
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
-    NSURL *url = [NSURL URLWithString:@"http://shefflettetech.com/testmoodle/webservice/rest/server.php?wstoken=5bf740e75ee58d5222263e4ccac9173d&wsfunction=local_test_get_grades_for_cohort_members&moodlewsrestformat=json&cohortids=1"];
+  /*  NSURL *url = [NSURL URLWithString:@"http://shefflettetech.com/testmoodle/webservice/rest/server.php?wstoken=5bf740e75ee58d5222263e4ccac9173d&wsfunction=local_test_get_grades_for_cohort_members&moodlewsrestformat=json&cohortids=1"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
-    NSMutableArray *students2 = [NSMutableArray arrayWithObjects: [NSMutableArray array], [NSMutableArray array], nil];
+    NSMutableArray *students2 = [NSMutableArray arrayWithObjects: [NSMutableArray array], [NSMutableArray array], nil];*/
     //[self.mainTableView registerClass:[UITableViewCell class] forCellWithReuseIdentifier:@"kCellID"];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //add token to the URL post
+    NSString *post =[[NSString alloc] initWithFormat:@"wstoken=%@&username=%@",token, userName];
+    //declare url
+    NSURL *url=[NSURL URLWithString:@"http://shefflettetech.com/testmoodle/webservice/rest/server.php?wsfunction=local_test_get_grades_for_cohort_members&moodlewsrestformat=json&"];
+    //combine postdata and url
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:url];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    
+    NSError *error = [[NSError alloc] init];
+    NSHTTPURLResponse *response = nil;
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
 }
 
 
@@ -304,8 +324,9 @@ NSString *kCellID = @"cellID";
 - (IBAction)viewClick:(id)sender
 {
 
-    NSLog(@"TEST BUTTON CLICK");
     StudentCollectionViewController *studentCollectionViewController = [[StudentCollectionViewController alloc] initWithNibName:@"StudentCollectionViewController" bundle:nil];
+    studentCollectionViewController.userName = self.userName;
+    studentCollectionViewController.token = self.token;
     [self.navigationController pushViewController:studentCollectionViewController animated:YES];
 }
 

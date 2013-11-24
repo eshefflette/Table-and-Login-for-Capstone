@@ -21,6 +21,9 @@
     NSMutableArray *cohort;
     double finalGradeHold;
     double finalGradeHoldTwo;
+    NSString *token;
+    NSString *userName;
+    
 }
 - (IBAction)viewClick:(id)sender;
 @property (nonatomic, retain) NSArray *students;
@@ -30,5 +33,7 @@
 @property (nonatomic, retain) NSMutableArray *cohort;
 @property (nonatomic) double finalGradeHold;
 @property (nonatomic) double finalGradeHoldTwo;
+@property (nonatomic, retain) NSString *userName;
+@property (nonatomic, retain) NSString *token;
 
 @end

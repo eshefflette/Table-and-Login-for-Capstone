@@ -44,7 +44,7 @@
             NSString *post =[[NSString alloc] initWithFormat:@"username=%@&password=%@",[usernameText text],[passwordText text]];
             NSLog(@"PostData: %@",post);
             
-            NSURL *url=[NSURL URLWithString:@"http://shefflettetech.com/testmoodle/login/token.php?service=moodle_mobile_app&"];
+            NSURL *url=[NSURL URLWithString:@"http://shefflettetech.com/testmoodle/login/token.php?service=advise&"];
             
             NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
             
@@ -82,16 +82,15 @@
                 {
                     token = [result valueForKey:@"token"];
                     NSLog(@"Output after storing token %@", token);
-                    NSLog(@"Login SUCCESS");
-                    StudentCollectionViewController *detailViewController = [[StudentCollectionViewController alloc] initWithNibName:@"StudentCollectionViewController" bundle:nil];
+                    StudentViewController *detailViewController = [[StudentViewController alloc] initWithNibName:@"StudentViewController" bundle:nil];
+                    detailViewController.token = token;
+                    detailViewController.userName = username;
                     [self.navigationController pushViewController:detailViewController animated:YES];
-                    //[self alertStatus:@"Logged in Successfully." :@"Login Success!"];
-                  //  StudentViewController *studentViewController = [[StudentViewController alloc] initWithNibName:@"StudentViewController" bundle:nil];
-                   // [self presentViewController:studentViewController animated:YES completion:nil];
                 } else {
-                    
+                    token = [result valueForKey:@"error"];
+               //     [self alertStatus:@"Invalid Username & Passowrd combination" :@"Login Failed"];
                    // NSString *error_msg = (NSString *) [jsonData objectForKey:@"error_message"];
-                    [self alertStatus:@"Invalid Username & Passowrd combination" :@"Login Failed"];
+                    [self alertStatus:token:@"Login Failed"];
                 }
                 
             } else {
